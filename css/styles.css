@@ -157,9 +157,9 @@ ul {
     .contacts-list {
         display: flex;
             flex-direction: column;
-            padding-top: 16px;
-            padding-bottom: 16px;
             gap: 12px;
+            align-items: center;
+            justify-content: center;
         }
 
     
@@ -198,6 +198,7 @@ ul {
         .nav-list-item {
         padding-top: 24px;
         padding-bottom: 24px;
+        display: block;
         }
                 .studio::after {
                     content: '';
@@ -208,7 +209,7 @@ ul {
                     ;
                     height: 4px;
                     border-radius: 2px;
-                    bottom: -14px;
+                    bottom: -1px;
                 }
                                 
 }
@@ -230,7 +231,7 @@ ul {
                                     ;
                                     height: 4px;
                                     border-radius: 2px;
-                                    bottom: -3.5px;
+                                    bottom: -1px;
                                 }
     .logo {
         margin-right: 76px;
@@ -244,6 +245,9 @@ ul {
                     flex-direction: row;
                     gap: 40px;
                 }
+    .contacts-item {
+        font-size: 16px;
+    }
 }
 /* Hero */
 
@@ -260,54 +264,57 @@ ul {
     background-position: center;
 }
 
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px),
+screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+    .section-hero {
+        background-image:
+            linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-mobile@2x.jpg);
+    }
+}
+
+
 @media screen and (min-width: 768px) {
     .section-hero {
         padding-top: 112px;
         background-image:
-        linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero-tablet.jpg);
+            linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-tablet.jpg);
     }
 }
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .section-hero {
+        background-image:
+            linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-tablet@2x.jpg);
+    }
+}
+
 @media screen and (min-width: 1158px) {
     .section-hero {
         padding-top: 188px;
         background-image:
-        linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero.jpg);
+            linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-desktop.jpg);
     }
-    
+
 }
 
-@media screen and (min-resolution: 192dpi), 
-screen and (min-resolution: 2dppx), 
-screen and (min-device-pixel-ratio: 2) {
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+screen and (min-resolution: 2dppx) and (min-width: 1158px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
     .section-hero {
-        background-image:
-        linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero-mobile@2x.jpg);
-    }
-} 
-
-@media screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx),
-screen and (min-device-pixel-ratio: 2), (min-width: 768px) {
-    .section-hero {
-            background-image:
-                linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/hero-tablet@2x.jpg);
-        }
-}
-
-@media screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx),
-screen and (min-device-pixel-ratio: 2),
-(min-width: 1158px) {
-.section-hero {
         background-image:
             linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/hero@2x.jpg);
+            url(../images/hero-desktop@2x.jpg);
     }
 }
+
+
 
 h1 {
     font-weight: bold;
@@ -746,7 +753,8 @@ h1 {
 
 .page-footer {
     background-color: #2E2F42;
-    padding: 96px 16px;
+    padding-top: 96px;
+    padding-bottom: 96px;
     
 }
 .footer-container {
