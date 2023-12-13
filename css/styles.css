@@ -503,8 +503,6 @@ h1 {
 .section-team {
     padding-top: 96px;
     padding-bottom: 96px;
-    padding-left: 12px;
-    padding-right: 12px;
     background-color: #f4f4fd;
 }
 
@@ -584,12 +582,6 @@ h1 {
 @media screen and (min-width: 768px) and (max-width: 1157px) {
 
 
-    .section-team {
-        
-        padding-left: 108px;
-        padding-right: 108px;
-    }
-
     .team-list {
         max-width: 552px;
         margin: 0 auto;
@@ -620,10 +612,6 @@ h1 {
     margin: 0 auto;
     gap: 24px;
     justify-content: center;
-}
-.section-team {
-    padding: 120px 156px;
-}
 }
 
 
